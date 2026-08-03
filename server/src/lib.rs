@@ -18,6 +18,11 @@ pub fn run(listener: TcpListener) -> io::Result<()> {
 }
 
 fn handle_connection(mut stream: TcpStream) -> io::Result<()> {
+    // Each request/response is small and synchronous (write, then block on the
+    // reply) - without this, Nagle's algorithm + delayed ACKs stall every
+    // round trip by tens of milliseconds.
+    stream.set_nodelay(true)?;
+
     loop {
         let request = match protocol::read_request(&mut stream) {
             Ok(r) => r,
