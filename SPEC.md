@@ -21,6 +21,16 @@ Two machines sit on opposite ends of an extremely low-bandwidth tunnel.
 - **Receiver side**: the server cluster, holding an identical copy of the defined
   datasets/algorithms and inference pads.
 
+**Core use case: interplanetary/interstellar links.** The scenario this is built
+for is two supercomputers at opposite ends of a link spanning astronomical
+distances — bandwidth is scarce and round-trip latency can be minutes, hours, or
+longer, so re-requesting or negotiating mid-transfer is impractical. Both ends
+must already hold everything they need (defined datasets, algorithms, pads)
+before the link is used; the only thing that ever crosses it is the client file.
+This is *why* provisioning has to happen out-of-band ahead of time (see below) —
+over a link like this, "just ask the other side for more data" isn't a fallback
+you get to have.
+
 Both sides must be provisioned identically (datasets, algorithms, pads) *before*
 the tunnel is used for anything — that provisioning happens out-of-band, since the
 tunnel itself is too narrow to carry it. Once provisioned:
