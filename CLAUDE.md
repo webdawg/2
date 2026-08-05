@@ -2,8 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-See `SPEC.md` for the project's architecture, terminology, and research roadmap — read it before making
-design decisions here, since this is a research prototype and the design is still being worked out.
+This is a research prototype with three top-level docs that must stay aligned — read all three before
+making design decisions here:
+
+- `INTENT.md` — the *why*: the motivating thought experiment and the one hard information-theoretic
+  constraint the design has to respect.
+- `SPEC.md` — the *how*: terminology, architecture, and open technical questions.
+- `COGNITION.md` — the *research methodology*: the empirical build-search-learn loop this project runs
+  on, and a standing summary of what's been learned running it so far (individual session logs are
+  `SESSION_<date>.md` at the repo root).
 
 ## Prerequisites
 
