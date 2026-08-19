@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-This is a research prototype with three top-level docs that must stay aligned — read all three before
+This is a research prototype with four top-level docs that must stay aligned — read all four before
 making design decisions here:
 
 - `INTENT.md` — the *why*: the motivating thought experiment and the one hard information-theoretic
@@ -11,6 +11,8 @@ making design decisions here:
 - `COGNITION.md` — the *research methodology*: the empirical build-search-learn loop this project runs
   on, and a standing summary of what's been learned running it so far (individual session logs are
   `SESSION_<date>.md` at the repo root).
+- `APPLICATIONS.md` — the *what for*: which kinds of real target data could plausibly fit the Known
+  constraint, and which are ruled out, downstream of `INTENT.md`.
 
 ## Prerequisites
 

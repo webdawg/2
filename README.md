@@ -51,6 +51,8 @@ in this order:
 - [`COGNITION.md`](COGNITION.md) — the research methodology: the empirical build-search-learn loop this
   project runs on, and a standing summary of what's been learned so far. Individual working-session
   notes live as `SESSION_<date>.md` files at the repo root.
+- [`APPLICATIONS.md`](APPLICATIONS.md) — what kinds of real target data could plausibly fit the hard
+  constraint above, and which are ruled out.
 
 ## Building and running
 
